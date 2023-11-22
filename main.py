@@ -1,11 +1,7 @@
 def histogram(num):
-    intnum = list(map(int, str(num)))
-    for i in intnum:
-        times = i
-        result = ''
-        while times > 0:
-            result+=str(i)
-            times-=1
-        print(result)
+    lst = list(map(int, str(num)))
+    for i in lst:
+        print(i*str(i))
+        
 num = input("Enter a number: ")
 histogram(num)
