@@ -1,8 +1,9 @@
-import yaml
+def histogram(num):
+      # Convert given number to list of integers
+      lst = list(map(int, str(num)))
+      # Iterate through the list to print the number as a string
+      for i in lst:
+          print(i * str(i))
 
-if __name__ == '__main__':
-    #loading the yaml file
-    with open("histogram_code.yaml", "r") as file:
-        yaml_data = yaml.safe_load(file)
-    #executing the python code stored as 'code' in the yaml file
-    exec(yaml_data['code'])
+num = input("Enter a number: ")
+histogram(num)

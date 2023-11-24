@@ -1,0 +1,19 @@
+name: Generate Histogram
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with: python-version:3.8
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Run Python script
+        run: python main.py
